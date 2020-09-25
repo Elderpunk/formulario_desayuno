@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <!-- SEO = Básico -->
-    <title></title>
+    <title>Formulario_desayuno</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -21,6 +21,7 @@
 
     <!-- links de estilos -->
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
     <!-- Se cambia el tema de algunos navegadores -->
@@ -30,21 +31,84 @@
     <!-- *** ESTRUCTURA SEMÁNTICA *** -->
     <!-- Header (encabezado de la página, zona superior) -->
     <header>
-      <!-- nav (el navegador de toda la web) -->
-      <nav>
-        <a href="" class="link1">link1</a>
-        <a href="" class="link2">link2</a>
-        <a href="" class="link3">link3</a>
-        <a href="" class="link4">link4</a>
-      </nav>
+      <picture>
+
+        <source srcset="img/tablet/banner.jpg, img/tablet/banner@2x.jpg" media="(min-width:768px) and (max-width:900px)">
+          <img src="img/tablet/banner.jpg" alt="banner">
+      </picture>
+      
     </header>
-    <!-- Main (centro de la página, zona central) -->
+   
+  
     <main>
-      <!-- section y article (posibilidades dentro de main) -->
+      <h1>Soller,desayunos con encanto</h1>
+      <h4>Encuesta de satisfacción</h4>
+      <form name="desayuno" method="POST" data-netlify="true">
+
+        <ol>
+          <li>
+            <label for="nombre_propio">Nombre</label>
+      <input type="text" placeholder="Nombre completo" required>
+          </li>
+        <li class="frecuencia">
+          <label for="frecuencia">¿Con qué frecuencia visitas nuestro restaurante?</label>
+   
+      <select name="frecuencia" id=""> 
+        <option value="diario">Todos los dias</option>
+        <option value="semana">Semanalmente</option>
+        <option value="devez">De vez en cuando</option>
+        <option value="primera">Es la primera vez</option>
+       </select>
+        </li>
+        <li class="satisfaccion">
+          <label for="satisfaccion">¿Qué tan probable es que recomiendes nuestros desayunos a tu familia o tus amigos?</label>
+   
+          <select name="satisfacción" id=""> 
+            <option value="muy">Muy probable</option>
+            <option value="semana">Probablemente</option>
+            <option value="devez">No lo recomendaria</option> 
+           </select>
+          </li>
+        <li class="tipo_desayuno">
+          <label for="satisfaccion">¿Cual es tu desayuno habitual?</label>
+          <ul class="tipo_desayuno">
+          <li>
+            <label for="Ingles">Desayuno inglés</label>
+            <input class="ingles" type="radio" name="Desayuno"
+            value="ingles">
+          </li>
+
+          <li>
+            <label for="continental">Desayuno continental</label>
+            <input type="radio" name="Desayuno"
+            value="continental"></li>
+          <li>
+            <label for="mediterraneo">Desayuno mediterraneo</label>
+            <input type="radio" name="Desayuno"
+            value="mediterraneo">
+          </li>
+          <li>
+            <label for="otro"> Otro</label>
+            <input type="radio" name="Desayuno"
+            value="otro"></li>
+</ul>
+        </li>
+        <li class="area">
+          <label for="comentarios">Comentarios</label>
+          <textarea name="" id="" cols="30" rows="10">
+       
+          </textarea></li>
+        
+      </ol>
+
+    </form>
+    <a href="https://www.google.com/">Enviar</a>
+    <button class="reset" type="reset">Borrado</button>
+
     </main>
-    <!-- Footer (final de la página, zona inferior) -->
+    
     <footer>
-      <h4>&copy;Copyright</h4>
+   
     </footer>
 
     <!-- *** Google Analytics *** -->
